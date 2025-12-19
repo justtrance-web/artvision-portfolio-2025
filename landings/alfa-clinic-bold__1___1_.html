@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--
+    ╔═══════════════════════════════════════════════════════════╗
+    ║  © 2025 Artvision.pro                                     ║
+    ║  Маркетинговое агентство с 2007 года                      ║
+    ║  Санкт-Петербург • Москва                                 ║
+    ║  https://artvision.pro                                    ║
+    ╚═══════════════════════════════════════════════════════════╝
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALFA-CLINIC — Премиальная стоматология в Хамовниках</title>
+    
+    <!-- Fonts: Syne for bold headlines, Outfit for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #C9A962;
+            --gold-light: #E5D4A1;
+            --gold-dark: #A68B4B;
+            --black: #0A0A0A;
+            --black-light: #141414;
+            --black-card: #1A1A1A;
+            --white: #FFFFFF;
+            --white-dim: rgba(255,255,255,0.7);
+            --white-muted: rgba(255,255,255,0.4);
+            
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+            
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+        
+        /* ===== INTRO ANIMATION ===== */
+        .intro {
+            position: fixed;
+            inset: 0;
+            background: var(--black);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+            animation: introFade 0.8s var(--ease-out) 2.5s forwards;
+        }
+        
+        .intro-logo {
+            font-family: var(--font-display);
+            font-size: clamp(48px, 12vw, 120px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            opacity: 0;
+            animation: introReveal 1s var(--ease-out) 0.3s forwards;
+        }
+        
+        .intro-logo span {
+            color: var(--gold);
+        }
+        
+        .intro-tagline {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--white-muted);
+            opacity: 0;
+            animation: introReveal 1s var(--ease-out) 0.8s forwards;
+        }
+        
+        @keyframes introReveal {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes introFade {
+            to { opacity: 0; pointer-events: none; }
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 24px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.5s var(--ease-out);
+        }
+        
+        header.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 16px 48px;
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+            color: var(--white);
+        }
+        
+        .logo span {
+            color: var(--gold);
+        }
+        
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+        }
+        
+        .header-phone {
+            font-size: 15px;
+            color: var(--white-dim);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .header-phone:hover {
+            color: var(--gold);
+        }
+        
+        .header-cta {
+            padding: 14px 32px;
+            background: var(--gold);
+            color: var(--black);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            border-radius: 100px;
+            transition: all 0.4s var(--ease-out);
+        }
+        
+        .header-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(201, 169, 98, 0.3);
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        
+        .menu-toggle span {
+            width: 28px;
+            height: 2px;
+            background: var(--white);
+            transition: all 0.3s;
+        }
+        
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 48px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+        
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                var(--black) 0%,
+                rgba(10, 10, 10, 0.8) 30%,
+                rgba(10, 10, 10, 0.4) 60%,
+                rgba(10, 10, 10, 0.6) 100%
+            );
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(48px, 10vw, 140px);
+            font-weight: 800;
+            line-height: 0.95;
+            letter-spacing: -0.04em;
+            margin-bottom: 40px;
+        }
+        
+        .hero-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        .hero-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 48px;
+            margin-top: 60px;
+        }
+        
+        .hero-info {
+            display: flex;
+            gap: 64px;
+        }
+        
+        .hero-info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .hero-info-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--white-muted);
+        }
+        
+        .hero-info-value {
+            font-size: 15px;
+            color: var(--white);
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 40px;
+            background: var(--white);
+            color: var(--black);
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            border-radius: 100px;
+            transition: all 0.4s var(--ease-out);
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(255, 255, 255, 0.15);
+        }
+        
+        .hero-cta svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .hero-cta:hover svg {
+            transform: translateX(4px);
+        }
+        
+        /* ===== ABOUT SECTION ===== */
+        .about {
+            padding: 160px 48px;
+            background: var(--black);
+        }
+        
+        .about-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--white-muted);
+            margin-bottom: 48px;
+        }
+        
+        .about-text {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 5vw, 72px);
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            max-width: 1200px;
+        }
+        
+        .about-text em {
+            font-style: normal;
+            color: var(--gold);
+        }
+        
+        /* ===== WHY TRUST US ===== */
+        .trust {
+            padding: 160px 48px;
+            background: var(--black-light);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .trust-image {
+            position: relative;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            border-radius: 24px;
+        }
+        
+        .trust-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(30%);
+            transition: all 0.6s var(--ease-out);
+        }
+        
+        .trust-image:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.03);
+        }
+        
+        .trust-content {
+            padding: 40px 0;
+        }
+        
+        .trust-title {
+            font-family: var(--font-display);
+            font-size: clamp(40px, 6vw, 80px);
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            margin-bottom: 64px;
+        }
+        
+        .trust-title em {
+            display: block;
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        .trust-features {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+        
+        .trust-feature {
+            padding-left: 32px;
+            border-left: 2px solid var(--gold);
+        }
+        
+        .trust-feature h3 {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .trust-feature p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--white-dim);
+            max-width: 400px;
+        }
+        
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 160px 48px;
+            background: var(--black);
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 5vw, 64px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+        
+        .section-link {
+            font-size: 14px;
+            color: var(--gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s;
+        }
+        
+        .section-link:hover {
+            gap: 16px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .service-card {
+            background: var(--black-card);
+            border-radius: 24px;
+            padding: 40px;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s var(--ease-out);
+            border: 1px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+        }
+        
+        .service-card.featured {
+            grid-column: span 2;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: var(--black);
+        }
+        
+        .service-card.featured .service-desc {
+            color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .service-card.featured .service-icon {
+            background: rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .service-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--white-dim);
+        }
+        
+        .service-arrow {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s var(--ease-out);
+        }
+        
+        .service-card:hover .service-arrow {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card.featured .service-arrow {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        /* ===== TEAM ===== */
+        .team {
+            padding: 160px 48px;
+            background: var(--black-light);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        .team-card {
+            position: relative;
+            aspect-ratio: 3/4;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .team-card.main {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        
+        .team-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(50%);
+            transition: all 0.6s var(--ease-out);
+        }
+        
+        .team-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        
+        .team-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 60%);
+        }
+        
+        .team-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 32px;
+            z-index: 1;
+        }
+        
+        .team-name {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .team-card.main .team-name {
+            font-size: 28px;
+        }
+        
+        .team-role {
+            font-size: 13px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .team-experience {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            font-size: 12px;
+            color: var(--white-dim);
+        }
+        
+        /* ===== STATS ===== */
+        .stats {
+            padding: 120px 48px;
+            background: var(--gold);
+            color: var(--black);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 48px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: clamp(48px, 6vw, 80px);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            opacity: 0.7;
+        }
+        
+        /* ===== GALLERY ===== */
+        .gallery {
+            padding: 160px 48px;
+            background: var(--black);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 24px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .gallery-item.tall {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.6s var(--ease-out);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s var(--ease-out);
+            z-index: 1;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* ===== CONTACT ===== */
+        .contact {
+            padding: 160px 48px;
+            background: var(--black-light);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+        
+        .contact-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 32px;
+        }
+        
+        .contact-content h2 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        .contact-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--white-dim);
+            margin-bottom: 48px;
+            max-width: 500px;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .contact-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--white-muted);
+        }
+        
+        .contact-value {
+            font-size: 18px;
+            color: var(--white);
+        }
+        
+        .contact-value a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-value a:hover {
+            color: var(--gold);
+        }
+        
+        .contact-form {
+            background: var(--black-card);
+            border-radius: 32px;
+            padding: 48px;
+        }
+        
+        .form-title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 32px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 18px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            font-family: var(--font-body);
+            font-size: 15px;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .form-input::placeholder {
+            color: var(--white-muted);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(201, 169, 98, 0.05);
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 20px;
+            background: var(--gold);
+            color: var(--black);
+            border: none;
+            border-radius: 16px;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.4s var(--ease-out);
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(201, 169, 98, 0.3);
+        }
+        
+        .form-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--white-muted);
+        }
+        
+        .form-consent input {
+            margin-top: 3px;
+            accent-color: var(--gold);
+        }
+        
+        /* ===== MAP ===== */
+        .map {
+            height: 500px;
+            position: relative;
+        }
+        
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%) invert(92%) contrast(85%);
+        }
+        
+        .map-overlay {
+            position: absolute;
+            top: 48px;
+            left: 48px;
+            background: var(--black);
+            padding: 32px;
+            border-radius: 24px;
+            max-width: 320px;
+        }
+        
+        .map-overlay h3 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .map-overlay p {
+            font-size: 14px;
+            color: var(--white-dim);
+            line-height: 1.6;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            padding: 80px 48px;
+            background: var(--black);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .footer-logo span {
+            color: var(--gold);
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+        
+        .footer-links a {
+            font-size: 14px;
+            color: var(--white-dim);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-copy {
+            font-size: 13px;
+            color: var(--white-muted);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .service-card.featured {
+                grid-column: span 2;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .team-card.main {
+                grid-column: span 2;
+                grid-row: span 1;
+                aspect-ratio: 16/9;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            header {
+                padding: 20px 32px;
+            }
+            
+            .hero {
+                padding: 0 32px 60px;
+            }
+            
+            .trust {
+                grid-template-columns: 1fr;
+                padding: 100px 32px;
+            }
+            
+            .contact {
+                grid-template-columns: 1fr;
+                padding: 100px 32px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .gallery-item.tall {
+                grid-row: span 1;
+                aspect-ratio: 4/3;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 24px;
+            }
+            
+            .header-phone, .header-cta {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 0 24px 48px;
+            }
+            
+            .hero-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .hero-info {
+                flex-direction: column;
+                gap: 24px;
+            }
+            
+            .about, .services, .team, .gallery {
+                padding: 80px 24px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card.featured {
+                grid-column: span 1;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-card.main {
+                grid-column: span 1;
+            }
+            
+            .stats {
+                padding: 80px 24px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 32px 24px;
+            }
+            
+            .map-overlay {
+                position: relative;
+                top: auto;
+                left: auto;
+                margin: 24px;
+                max-width: none;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s var(--ease-out);
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Intro Animation -->
+    <div class="intro">
+        <div class="intro-logo">ALFA<span>-</span>CLINIC</div>
+        <div class="intro-tagline">Премиальная стоматология в Хамовниках</div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">ALFA<span>-</span>CLINIC</a>
+        <div class="header-right">
+            <a href="tel:+74959724022" class="header-phone">+7 (495) 972-40-22</a>
+            <a href="#contact" class="header-cta">Записаться</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1920&q=80" alt="Smile">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Потому что<br>
+                ваша улыбка<br>
+                заслуживает<br>
+                <em>лучшего</em>
+            </h1>
+            <div class="hero-bottom">
+                <div class="hero-info">
+                    <div class="hero-info-item">
+                        <span class="hero-info-label">Часы работы</span>
+                        <span class="hero-info-value">Пн-Сб 9:00—21:00</span>
+                    </div>
+                    <div class="hero-info-item">
+                        <span class="hero-info-label">Локация</span>
+                        <span class="hero-info-value">Малая Пироговская, 16</span>
+                    </div>
+                    <div class="hero-info-item">
+                        <span class="hero-info-label">Метро</span>
+                        <span class="hero-info-value">Спортивная • 5 мин</span>
+                    </div>
+                </div>
+                <a href="#contact" class="hero-cta">
+                    Консультация
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-label">О клинике</div>
+        <p class="about-text fade-up">
+            Премиальная <em>цифровая</em> стоматология, 
+            сфокусированная на безопасном и эффективном 
+            лечении с применением <em>передовых технологий</em> 
+            и инноваций
+        </p>
+    </section>
+    
+    <!-- Why Trust Us -->
+    <section class="trust">
+        <div class="trust-image">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80" alt="Dental Equipment">
+        </div>
+        <div class="trust-content">
+            <h2 class="trust-title">
+                Почему нам<br>
+                <em>доверяют?</em>
+            </h2>
+            <div class="trust-features">
+                <div class="trust-feature fade-up">
+                    <h3>Гарантия качества</h3>
+                    <p>Гарантируем результат лечения. При осложнениях исправим бесплатно или вернём деньги</p>
+                </div>
+                <div class="trust-feature fade-up">
+                    <h3>Полный цикл</h3>
+                    <p>Собственная лаборатория: все анализы и производство на месте с полным контролем</p>
+                </div>
+                <div class="trust-feature fade-up">
+                    <h3>Цифровые технологии</h3>
+                    <p>Микроскоп, КТ-сканер, 3D-моделирование для точной диагностики каждого случая</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services -->
+    <section class="services">
+        <div class="section-header">
+            <h2 class="section-title">Услуги</h2>
+            <a href="#" class="section-link">
+                Все услуги
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="services-grid">
+            <div class="service-card featured">
+                <div>
+                    <div class="service-icon">🦷</div>
+                    <h3 class="service-title">Имплантация</h3>
+                    <p class="service-desc">Имплантация любой сложности. Системы Astra Tech, Dentium, Straumann</p>
+                </div>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">✨</div>
+                    <h3 class="service-title">Виниры</h3>
+                    <p class="service-desc">Восстановление улыбки в короткие сроки</p>
+                </div>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🔬</div>
+                    <h3 class="service-title">Протезирование</h3>
+                    <p class="service-desc">Современные конструкции и цифровые протоколы</p>
+                </div>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🩺</div>
+                    <h3 class="service-title">Лечение под микроскопом</h3>
+                    <p class="service-desc">Кисты и гранулёмы с минимальным вмешательством</p>
+                </div>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">👶</div>
+                    <h3 class="service-title">Детская стоматология</h3>
+                    <p class="service-desc">Забота о самых маленьких пациентах</p>
+                </div>
+                <div class="service-arrow">→</div>
+            </div>
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">💎</div>
+                    <h3 class="service-title">Отбеливание Zoom 4</h3>
+                    <p class="service-desc">Профессиональная гигиена и отбеливание</p>
+                </div>
+                <div class="service-arrow">→</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team -->
+    <section class="team">
+        <div class="section-header">
+            <h2 class="section-title">Наши специалисты</h2>
+            <a href="#" class="section-link">
+                Все врачи
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="team-grid">
+            <div class="team-card main">
+                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80" alt="Роман Марулиди">
+                <div class="team-info">
+                    <div class="team-name">Марулиди Роман Георгиевич</div>
+                    <div class="team-role">Главный врач • Основатель</div>
+                    <span class="team-experience">Стаж 23 года • К.м.н.</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80" alt="Хирург">
+                <div class="team-info">
+                    <div class="team-name">Самарчян С.В.</div>
+                    <div class="team-role">Хирург-имплантолог</div>
+                    <span class="team-experience">18 лет</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80" alt="Ортодонт">
+                <div class="team-info">
+                    <div class="team-name">Гришицева Н.Ю.</div>
+                    <div class="team-role">Ортодонт</div>
+                    <span class="team-experience">26 лет</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80" alt="Терапевт">
+                <div class="team-info">
+                    <div class="team-name">Иванова Н.Н.</div>
+                    <div class="team-role">Терапевт</div>
+                    <span class="team-experience">5+ лет</span>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=600&q=80" alt="Ортопед">
+                <div class="team-info">
+                    <div class="team-name">Сазыкин А.Б.</div>
+                    <div class="team-role">Ортопед</div>
+                    <span class="team-experience">10+ лет</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">17+</div>
+                <div class="stat-label">Лет опыта</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">10K+</div>
+                <div class="stat-label">Пациентов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Специалистов</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">4.9</div>
+                <div class="stat-label">Рейтинг</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery -->
+    <section class="gallery">
+        <div class="section-header">
+            <h2 class="section-title">Клиника</h2>
+            <a href="#" class="section-link">
+                Все фото
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item tall">
+                <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=600&q=80" alt="Интерьер">
+                <span class="gallery-caption">Кабинет терапии</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80" alt="Оборудование">
+                <span class="gallery-caption">Оборудование</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="Приём">
+                <span class="gallery-caption">Приём пациента</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" alt="Ресепшн">
+                <span class="gallery-caption">Ресепшн</span>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600&q=80" alt="Зона ожидания">
+                <span class="gallery-caption">Зона ожидания</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Запишитесь<br>на <em>консультацию</em></h2>
+            <p class="contact-text">
+                Первичная консультация включает панорамный снимок, 
+                3D сканирование и детальный план лечения
+            </p>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span class="contact-label">Телефон</span>
+                    <span class="contact-value">
+                        <a href="tel:+74959724022">+7 (495) 972-40-22</a>
+                    </span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Адрес</span>
+                    <span class="contact-value">Москва, Малая Пироговская, 16</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Метро</span>
+                    <span class="contact-value">Спортивная • Хамовники</span>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <div class="form-title">Онлайн-запись</div>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" class="form-input" placeholder="Телефон" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Удобное время">
+                </div>
+                <button type="submit" class="form-submit">Записаться</button>
+                <label class="form-consent">
+                    <input type="checkbox" required>
+                    <span>Согласен с политикой конфиденциальности</span>
+                </label>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Map -->
+    <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1234567890&amp;source=constructor&amp;ll=37.566593%2C55.728297&amp;z=16" frameborder="0"></iframe>
+        <div class="map-overlay">
+            <h3>ALFA-CLINIC</h3>
+            <p>Малая Пироговская улица, 16<br>Метро Спортивная, 5 минут пешком</p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">ALFA<span>-</span>CLINIC</div>
+            <div class="footer-links">
+                <a href="#">Услуги</a>
+                <a href="#">Врачи</a>
+                <a href="#">Цены</a>
+                <a href="#">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer-copy">© 2007—2025 ALFA-CLINIC. Стоматология у метро Спортивная</div>
+        </div>
+    </footer>
+    
+    <script>
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Fade up animations
+        const fadeElements = document.querySelectorAll('.fade-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(el => observer.observe(el));
+        
+        // Hide intro after animation
+        setTimeout(() => {
+            document.querySelector('.intro').style.display = 'none';
+        }, 3300);
+    </script>
+
+<!-- Artvision.pro Watermark -->
+<style>
+.artvision-watermark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.artvision-watermark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(87, 150, 204, 0.3);
+}
+.artvision-watermark__logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #5796CC 0%, #3a7bb3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.artvision-watermark__text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -0.02em;
+}
+.artvision-watermark__text span {
+    color: #5796CC;
+}
+@media (max-width: 480px) {
+    .artvision-watermark {
+        bottom: 15px;
+        right: 15px;
+        padding: 6px 12px;
+    }
+    .artvision-watermark__logo {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .artvision-watermark__text {
+        font-size: 11px;
+    }
+}
+@media print {
+    .artvision-watermark { display: none !important; }
+}
+</style>
+<a href="https://artvision.pro" target="_blank" rel="noopener" class="artvision-watermark" title="Разработано в Artvision.pro">
+    <div class="artvision-watermark__logo">A</div>
+    <div class="artvision-watermark__text">Artvision<span>.pro</span></div>
+</a>
+<!-- /Artvision.pro Watermark -->
+
+</body>
+</html>
