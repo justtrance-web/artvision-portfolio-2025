@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--
+    ╔═══════════════════════════════════════════════════════════╗
+    ║  © 2025 Artvision.pro                                     ║
+    ║  Маркетинговое агентство с 2007 года                      ║
+    ║  Санкт-Петербург • Москва                                 ║
+    ║  https://artvision.pro                                    ║
+    ╚═══════════════════════════════════════════════════════════╝
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTIDO Group — Выставочные стенды под ключ | Москва и Санкт-Петербург</title>
+    <meta name="description" content="Застройка выставочных стендов от OTIDO Group. beMatrix, Prolyte, Momo, Double Deck. 20+ лет опыта, 1000+ проектов.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0071E3;
+            --primary-hover: #0077ED;
+            --text: #1D1D1F;
+            --text-secondary: #86868B;
+            --bg: #FFFFFF;
+            --bg-alt: #F5F5F7;
+            --bg-dark: #1D1D1F;
+            --border: #D2D2D7;
+            --radius-pill: 980px;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* NAVIGATION */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--primary); }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-phone {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: var(--radius-pill);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-btn:hover { background: var(--primary-hover); }
+
+        /* HERO WITH VIDEO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, #000 0%, #1D1D1F 100%);
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 0 24px;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            color: var(--primary);
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-title {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            max-width: 1000px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(19px, 2.5vw, 24px);
+            color: rgba(255,255,255,0.8);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.4;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: var(--radius-pill);
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: scale(1.02);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: var(--radius-pill);
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.25);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.6);
+            font-size: 14px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* STATS */
+        .stats {
+            padding: 80px 0;
+            background: var(--bg);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 64px;
+            font-weight: 700;
+            color: var(--text);
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-number span { color: var(--primary); }
+
+        .stat-label {
+            font-size: 17px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* SECTIONS */
+        .section-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 21px;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+
+        /* SYSTEMS (beMatrix etc) */
+        .systems {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .system-card {
+            background: #000;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .system-card:hover { transform: translateY(-4px); }
+
+        .system-image {
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .system-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .system-card:hover .system-image img {
+            transform: scale(1.05);
+        }
+
+        .system-content {
+            padding: 32px;
+            text-align: center;
+            background: var(--bg-alt);
+        }
+
+        .system-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .system-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .system-country {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .system-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .system-price {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .system-price strong {
+            font-size: 24px;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .link-arrow {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .link-arrow:hover { text-decoration: underline; }
+        .link-arrow::after { content: ' →'; }
+
+        /* VIDEO SECTION FOR SYSTEMS */
+        .system-videos {
+            padding: 80px 0;
+            background: #000;
+        }
+
+        .video-section-title {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .video-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .video-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 24px;
+        }
+
+        .video-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-brand-logo {
+            height: 24px;
+            opacity: 0.9;
+        }
+
+        .video-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 72px;
+            height: 72px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .video-play::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid white;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+
+        .video-card:hover .video-play {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-info {
+            color: white;
+        }
+
+        .video-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .video-subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* READY SOLUTIONS */
+        .ready-solutions {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+
+        .solutions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .solutions-title {
+            font-size: 28px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .solutions-nav {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-arrow {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 20px;
+            color: var(--text);
+        }
+
+        .nav-arrow:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .solution-card {
+            background: var(--bg);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-image {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .solution-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .solution-content {
+            padding: 20px;
+        }
+
+        .solution-name {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .solution-type {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .solution-price {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        /* PORTFOLIO */
+        .portfolio {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            cursor: pointer;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover img { transform: scale(1.05); }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+            color: white;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+        .portfolio-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .portfolio-event {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .portfolio-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* PROCESS */
+        .process {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            right: -16px;
+            width: 32px;
+            height: 2px;
+            background: var(--border);
+        }
+
+        .process-step:last-child::after { display: none; }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--bg-alt);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 auto 20px;
+        }
+
+        .step-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .step-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* CALCULATOR */
+        .calculator {
+            padding: 100px 0;
+            background: var(--bg-alt);
+        }
+
+        .calc-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+        }
+
+        .calc-title {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .calc-subtitle {
+            font-size: 17px;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .calc-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calc-label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .calc-input, .calc-select {
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            font-size: 17px;
+            font-family: inherit;
+            transition: var(--transition);
+            appearance: none;
+            background: var(--bg);
+        }
+
+        .calc-select {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2386868B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 44px;
+        }
+
+        .calc-input:focus, .calc-select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+        }
+
+        .calc-select:hover {
+            border-color: #86868B;
+        }
+
+        .calc-result {
+            grid-column: 1 / -1;
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .calc-result-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .calc-result-price {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .calc-result-price span {
+            font-size: 24px;
+            color: var(--text-secondary);
+        }
+
+        /* REVIEWS */
+        .reviews {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .review-card {
+            background: var(--bg-alt);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+
+        .review-stars {
+            color: #FF9500;
+            font-size: 18px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 16px;
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .review-name {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .review-company {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* VENUES */
+        .venues {
+            padding: 60px 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+
+        .venues-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .venue-logo {
+            height: 32px;
+            width: auto;
+            filter: grayscale(1);
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .venue-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* CLIENTS */
+        .clients {
+            padding: 60px 0;
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+        }
+
+        .clients-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .client-logo {
+            height: 32px;
+            width: auto;
+            filter: grayscale(1);
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+
+        .client-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 100px 0;
+            background: var(--bg);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-alt);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            font-family: inherit;
+            color: var(--text);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover { color: var(--primary); }
+
+        .faq-icon {
+            font-size: 24px;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer { max-height: 300px; }
+
+        .faq-answer-content {
+            padding: 0 24px 24px;
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 100px 0;
+            background: var(--bg-dark);
+            color: white;
+        }
+
+        .cta-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .cta-title {
+            font-size: clamp(36px, 5vw, 48px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-text {
+            font-size: 21px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .cta-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .cta-feature::before {
+            content: '✓';
+            color: #30D158;
+            font-weight: bold;
+        }
+
+        .cta-form {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+        }
+
+        .cta-form-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .form-group { margin-bottom: 16px; }
+
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-md);
+            font-size: 17px;
+            color: white;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-btn {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .form-note {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 60px 0 30px;
+            background: var(--bg-alt);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .footer-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li { margin-bottom: 12px; }
+
+        .footer-links a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover { color: var(--primary); }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .footer-bottom a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover { color: var(--primary); }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .systems-grid { grid-template-columns: 1fr; }
+            .videos-grid { grid-template-columns: 1fr; }
+            .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .cta-content { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .solutions-grid { grid-template-columns: 1fr 1fr; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .process-grid { grid-template-columns: 1fr 1fr; }
+            .process-step::after { display: none; }
+            .venues-grid, .clients-grid { gap: 24px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .stat-number { font-size: 48px; }
+            .solutions-grid { grid-template-columns: 1fr; }
+            .calc-grid { grid-template-columns: 1fr; }
+            .venues-grid, .clients-grid { gap: 20px; }
+            .venue-logo, .client-logo { height: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <a href="/" class="nav-logo">OTIDO Group</a>
+            <ul class="nav-links">
+                <li><a href="#systems">Системы</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#calculator">Калькулятор</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="tel:+78126775501" class="nav-phone">+7 812 677-55-01</a>
+                <a href="#contacts" class="nav-btn">Заявка</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://www.otido-group.ru/bitrix/templates/otido/images/main_slide.jpg">
+            <source src="https://www.otido-group.ru/bitrix/templates/otido/video/expo_cover_2.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">С 2003 года</span>
+            <h1 class="hero-title">Выставочные стенды<br>мирового уровня</h1>
+            <p class="hero-subtitle">Проектируем и строим стенды любой сложности на базе европейского оборудования. Работаем по всей России.</p>
+            <div class="hero-buttons">
+                <a href="#contacts" class="btn-primary">Рассчитать стоимость</a>
+                <a href="#portfolio" class="btn-secondary">Смотреть проекты</a>
+            </div>
+        </div>
+        <div class="hero-scroll">↓ Листайте вниз</div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">22<span>+</span></div>
+                    <div class="stat-label">лет на рынке</div>
+                </div>
+                <div>
+                    <div class="stat-number">1000<span>+</span></div>
+                    <div class="stat-label">проектов</div>
+                </div>
+                <div>
+                    <div class="stat-number">100<span>+</span></div>
+                    <div class="stat-label">клиентов</div>
+                </div>
+                <div>
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">столицы</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Systems -->
+    <section class="systems" id="systems">
+        <div class="container">
+            <h2 class="section-title">Системы застройки</h2>
+            <p class="section-subtitle">Используем лучшее европейское оборудование</p>
+            <div class="systems-grid">
+                <a href="https://www.otido-group.ru/expo/stands/bematrix/" class="system-card" target="_blank">
+                    <div class="system-image">
+                        <img src="https://www.otido-group.ru/bitrix/templates/otido/images/expo_block_1.png" alt="beMatrix">
+                    </div>
+                    <div class="system-content">
+                        <span class="system-badge">Premium</span>
+                        <h3 class="system-name">beMatrix</h3>
+                        <p class="system-country">Бельгия</p>
+                        <p class="system-desc">Модульный конструктор с мультимедийными возможностями. LED-интеграция, криволинейные формы.</p>
+                        <p class="system-price">от <strong>180 000</strong> ₽</p>
+                        <span class="link-arrow">Подробнее</span>
+                    </div>
+                </a>
+                <a href="https://www.otido-group.ru/expo/stands/prolyte/" class="system-card" target="_blank">
+                    <div class="system-image">
+                        <img src="https://www.otido-group.ru/bitrix/templates/otido/images/expo_block_2.png" alt="Prolyte">
+                    </div>
+                    <div class="system-content">
+                        <span class="system-badge">Фермы</span>
+                        <h3 class="system-name">Prolyte</h3>
+                        <p class="system-country">Нидерланды</p>
+                        <p class="system-desc">Стенды из фермы различного сечения. Подвесные конструкции любой сложности.</p>
+                        <p class="system-price">от <strong>24 000</strong> ₽/м.п.</p>
+                        <span class="link-arrow">Подробнее</span>
+                    </div>
+                </a>
+                <a href="https://www.otido-group.ru/expo/stands/momo/" class="system-card" target="_blank">
+                    <div class="system-image">
+                        <img src="https://www.otido-group.ru/bitrix/templates/otido/images/expo_block_3.png" alt="Momo Cube">
+                    </div>
+                    <div class="system-content">
+                        <span class="system-badge">Мобильный</span>
+                        <h3 class="system-name">Momo Cube</h3>
+                        <p class="system-country">Германия</p>
+                        <p class="system-desc">Мобильная модульная система. Идеальна для роуд-шоу и презентаций.</p>
+                        <p class="system-price">от <strong>150 000</strong> ₽</p>
+                        <span class="link-arrow">Подробнее</span>
+                    </div>
+                </a>
+                <a href="https://www.otido-group.ru/expo/stands/double-deck/" class="system-card" target="_blank">
+                    <div class="system-image">
+                        <img src="https://www.otido-group.ru/bitrix/templates/otido/images/expo_block_4.png" alt="Double Deck">
+                    </div>
+                    <div class="system-content">
+                        <span class="system-badge">Двухэтажный</span>
+                        <h3 class="system-name">Double Deck</h3>
+                        <p class="system-country">Бельгия</p>
+                        <p class="system-desc">Двухэтажные стенды Xtreme Solution. VIP-переговорные, обзорные площадки.</p>
+                        <p class="system-price">от <strong>350 000</strong> ₽</p>
+                        <span class="link-arrow">Подробнее</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="system-videos">
+        <div class="container">
+            <h2 class="video-section-title">Видео проектов</h2>
+            <div class="videos-grid">
+                <div class="video-card" onclick="window.open('https://www.otido-group.ru/expo/stands/bematrix/', '_blank')">
+                    <img src="https://www.otido-group.ru/upload/resize_cache/iblock/98a/700_443_2/98a00d1ec4dc238028eb280b58efc2b8.jpg" alt="beMatrix EUROSHOP">
+                    <div class="video-overlay">
+                        <div class="video-brand">
+                            <svg class="video-brand-logo" viewBox="0 0 120 24" fill="white">
+                                <text x="0" y="18" font-family="Inter, sans-serif" font-size="16" font-weight="700">beMatrix</text>
+                            </svg>
+                        </div>
+                        <div class="video-play"></div>
+                        <div class="video-info">
+                            <div class="video-title">EUROSHOP</div>
+                            <div class="video-subtitle">Xtreme Solutions by beMatrix</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card" onclick="window.open('https://www.otido-group.ru/expo/stands/bematrix/', '_blank')">
+                    <img src="https://www.otido-group.ru/upload/resize_cache/iblock/937/700_443_2/937484b3fd05cc8026a53682d8315d8b.jpg" alt="SIEMENS">
+                    <div class="video-overlay">
+                        <div class="video-brand">
+                            <svg class="video-brand-logo" viewBox="0 0 120 24" fill="white">
+                                <text x="0" y="18" font-family="Inter, sans-serif" font-size="16" font-weight="700">beMatrix</text>
+                            </svg>
+                        </div>
+                        <div class="video-play"></div>
+                        <div class="video-info">
+                            <div class="video-title">SIEMENS</div>
+                            <div class="video-subtitle">by Priority Exhibitions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card" onclick="window.open('https://www.otido-group.ru/expo/stands/bematrix/', '_blank')">
+                    <img src="https://www.otido-group.ru/upload/resize_cache/iblock/581/700_443_2/581f1a1ceeeba5b719cc0030fe7ec342.jpg" alt="ROCHE">
+                    <div class="video-overlay">
+                        <div class="video-brand">
+                            <svg class="video-brand-logo" viewBox="0 0 120 24" fill="white">
+                                <text x="0" y="18" font-family="Inter, sans-serif" font-size="16" font-weight="700">beMatrix</text>
+                            </svg>
+                        </div>
+                        <div class="video-play"></div>
+                        <div class="video-info">
+                            <div class="video-title">ROCHE</div>
+                            <div class="video-subtitle">by Commercon Messebau</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-card" onclick="window.open('https://www.otido-group.ru/expo/stands/prolyte/', '_blank')">
+                    <img src="https://www.otido-group.ru/upload/resize_cache/iblock/813/700_443_2/8135e814fccbfb9de57f6792af33ccdb.jpg" alt="HUAWEI">
+                    <div class="video-overlay">
+                        <div class="video-brand">
+                            <svg class="video-brand-logo" viewBox="0 0 80 24" fill="white">
+                                <text x="0" y="18" font-family="Inter, sans-serif" font-size="16" font-weight="700">Prolyte</text>
+                            </svg>
+                        </div>
+                        <div class="video-play"></div>
+                        <div class="video-info">
+                            <div class="video-title">HUAWEI</div>
+                            <div class="video-subtitle">@Power Expo 2017</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ready Solutions beMatrix -->
+    <section class="ready-solutions">
+        <div class="container">
+            <div class="solutions-header">
+                <h3 class="solutions-title">Готовые решения</h3>
+                <div class="solutions-nav">
+                    <button class="nav-arrow">‹</button>
+                    <button class="nav-arrow">›</button>
+                </div>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="https://www.otido-group.ru/upload/resize_cache/iblock/98a/700_443_2/98a00d1ec4dc238028eb280b58efc2b8.jpg" alt="BEMATRIX 24">
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-name">BEMATRIX 24</div>
+                        <div class="solution-type">Expo конструктор (BEL)</div>
+                        <div class="solution-price">180 000 руб.</div>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="https://www.otido-group.ru/upload/resize_cache/iblock/937/700_443_2/937484b3fd05cc8026a53682d8315d8b.jpg" alt="BEMATRIX 36">
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-name">BEMATRIX 36</div>
+                        <div class="solution-type">Expo конструктор (BEL)</div>
+                        <div class="solution-price">360 000 руб.</div>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="https://www.otido-group.ru/upload/resize_cache/iblock/581/700_443_2/581f1a1ceeeba5b719cc0030fe7ec342.jpg" alt="PROLYTE 24">
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-name">PROLYTE 24</div>
+                        <div class="solution-type">Expo конструктор (NED)</div>
+                        <div class="solution-price">24 000 руб.</div>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-image">
+                        <img src="https://www.otido-group.ru/upload/resize_cache/iblock/813/700_443_2/8135e814fccbfb9de57f6792af33ccdb.jpg" alt="DOUBLE DECK 24">
+                    </div>
+                    <div class="solution-content">
+                        <div class="solution-name">DOUBLE DECK 24</div>
+                        <div class="solution-type">Двухэтажные стенды (BEL)</div>
+                        <div class="solution-price">120 000 руб.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Портфолио</h2>
+            <p class="section-subtitle">Более 1000 реализованных проектов</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://www.otido-group.ru/upload/iblock/a8a/a8a0a06f0cc756cc128aec1717417d7f.jpeg" alt="MITT 2025">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">MITT 2025</div>
+                        <div class="portfolio-event">Крокус Экспо, Москва</div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.otido-group.ru/upload/iblock/62d/62d2ab95e970663f98ee6a858bee970f.jpeg" alt="ПРОДЭКСПО">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">ПРОДЭКСПО</div>
+                        <div class="portfolio-event">Экспоцентр, Москва</div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.otido-group.ru/upload/iblock/aad/aad33548683ba20aaf12ad95dfd52d32.jpeg" alt="ProMediaTech">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">ProMediaTech</div>
+                        <div class="portfolio-event">Экспоцентр, Москва</div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.otido-group.ru/upload/iblock/f52/f52ec8ba267ce66bf68fb3dfbfda61a9.jpeg" alt="BroConf 5">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">BroConf 5</div>
+                        <div class="portfolio-event">MTS Live Hall, Москва</div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.otido-group.ru/upload/iblock/f60/f60eb5fd8851ef00c14506bb80d2173a.jpeg" alt="РАН">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">РАН</div>
+                        <div class="portfolio-event">Российская Академия Наук</div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.otido-group.ru/upload/iblock/b19/b19bdb930b56eb35bebcbe80145125af.jpg" alt="ROSUPACK">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-title">ROSUPACK</div>
+                        <div class="portfolio-event">Крокус Экспо, Москва</div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-more">
+                <a href="https://www.otido-group.ru/portfolio/" class="btn-primary" target="_blank">Все проекты</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Этапы работы</h2>
+            <p class="section-subtitle">От идеи до готового стенда за 4 шага</p>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Бриф</h3>
+                    <p class="step-desc">Обсуждаем задачи, бюджет и особенности выставки</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">3D-дизайн</h3>
+                    <p class="step-desc">Создаём визуализацию. 2-3 варианта на выбор</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Производство</h3>
+                    <p class="step-desc">Изготавливаем элементы и готовим документы</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Монтаж</h3>
+                    <p class="step-desc">Собираем стенд и обеспечиваем техподдержку</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="calc-container">
+                <h2 class="calc-title">Калькулятор стоимости</h2>
+                <p class="calc-subtitle">Получите предварительный расчёт за 30 секунд</p>
+                <div class="calc-grid">
+                    <div class="calc-group">
+                        <label class="calc-label">Площадь стенда (м²)</label>
+                        <input type="number" class="calc-input" id="calc-area" value="24" min="6" max="500">
+                    </div>
+                    <div class="calc-group">
+                        <label class="calc-label">Система</label>
+                        <select class="calc-select" id="calc-system">
+                            <option value="momo">Momo Cube — 8 000 ₽/м²</option>
+                            <option value="bematrix" selected>beMatrix — 12 000 ₽/м²</option>
+                            <option value="prolyte">Prolyte — 6 000 ₽/м²</option>
+                            <option value="doubledeck">Double Deck — 15 000 ₽/м²</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label class="calc-label">Город</label>
+                        <select class="calc-select" id="calc-city">
+                            <option value="spb">Санкт-Петербург</option>
+                            <option value="msk">Москва</option>
+                            <option value="other">Другой город</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label class="calc-label">Этажность</label>
+                        <select class="calc-select" id="calc-floors">
+                            <option value="1">Одноэтажный</option>
+                            <option value="2">Двухэтажный</option>
+                        </select>
+                    </div>
+                    <div class="calc-result">
+                        <div class="calc-result-label">Ориентировочная стоимость</div>
+                        <div class="calc-result-price" id="calc-total">288 000 <span>₽</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы</h2>
+            <p class="section-subtitle">Что говорят наши клиенты</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Работаем с OTIDO уже 5 лет. Каждый раз впечатляют сроки и качество. Стенд на MITT 2025 получил лучший отзыв от партнёров.»</p>
+                    <div class="review-author">
+                        <div class="review-avatar">АК</div>
+                        <div>
+                            <div class="review-name">Алексей Комаров</div>
+                            <div class="review-company">TUI Россия</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Двухэтажный стенд Double Deck — это было невероятно. Окупили инвестиции в 3 раза за счёт привлечённых контактов.»</p>
+                    <div class="review-author">
+                        <div class="review-avatar">ЕС</div>
+                        <div>
+                            <div class="review-name">Елена Смирнова</div>
+                            <div class="review-company">InnoTech Solutions</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Нужен был стенд за 10 дней — казалось невозможным. OTIDO сделали и не подвели по качеству.»</p>
+                    <div class="review-author">
+                        <div class="review-avatar">МП</div>
+                        <div>
+                            <div class="review-name">Михаил Петров</div>
+                            <div class="review-company">Газпром нефть</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues -->
+    <section class="venues">
+        <div class="container">
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 32px; color: var(--text-secondary);">Аккредитованы на площадках</p>
+            <div class="venues-grid">
+                <!-- Crocus Expo SVG -->
+                <svg class="venue-logo" viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#E31E24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">КРОКУС ЭКСПО</text>
+                </svg>
+                
+                <!-- Экспоцентр SVG -->
+                <svg class="venue-logo" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#00589c" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600">ЭКСПОЦЕНТР</text>
+                </svg>
+                
+                <!-- Expoforum SVG -->
+                <svg class="venue-logo" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#1B4F9B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600">ЭКСПОФОРУМ</text>
+                </svg>
+                
+                <!-- VDNH SVG -->
+                <svg class="venue-logo" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#C8102E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="700">ВДНХ</text>
+                </svg>
+                
+                <!-- Lenexpo SVG -->
+                <svg class="venue-logo" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#003D7C" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600">ЛЕНЭКСПО</text>
+                </svg>
+                
+                <!-- Sokolniki SVG -->
+                <svg class="venue-logo" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#00875A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600">СОКОЛЬНИКИ</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients -->
+    <section class="clients">
+        <div class="container">
+            <p class="section-subtitle" style="text-align:center; margin-bottom: 32px; color: var(--text-secondary);">Нам доверяют</p>
+            <div class="clients-grid">
+                <!-- Bitrix24 -->
+                <svg class="client-logo" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#2FC7F7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700">Битрикс24</text>
+                </svg>
+                
+                <!-- Hermitage -->
+                <svg class="client-logo" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#006847" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600">ЭРМИТАЖ</text>
+                </svg>
+                
+                <!-- Rosupack -->
+                <svg class="client-logo" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#E4002B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700">RosUpack</text>
+                </svg>
+                
+                <!-- Gazprom -->
+                <svg class="client-logo" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#0033A0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700">ГАЗПРОМ</text>
+                </svg>
+                
+                <!-- Junwex -->
+                <svg class="client-logo" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#C9A227" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600">JUNWEX</text>
+                </svg>
+                
+                <!-- Therabody -->
+                <svg class="client-logo" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#000000" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="600">Therabody</text>
+                </svg>
+                
+                <!-- SN PRO -->
+                <svg class="client-logo" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#FF6B00" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700">SN PRO</text>
+                </svg>
+                
+                <!-- RAN -->
+                <svg class="client-logo" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <text x="0" y="28" fill="#003087" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700">РАН</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Частые вопросы</h2>
+            <p class="section-subtitle">Ответы на популярные вопросы</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>За сколько дней до выставки нужно обращаться?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Оптимально — за 3-4 недели. Но мы работали и в срочных случаях за 10 дней. Чем раньше обратитесь — тем больше времени на проработку дизайна.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Работаете ли вы в других городах?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Да, работаем по всей России. Основные офисы в Москве и Санкт-Петербурге, но монтаж выполняем в любом городе.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Можно ли арендовать стенд, а не покупать?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Да, все наши системы доступны в аренду. Это экономичное решение для разовых выставок.</div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Что входит в стоимость?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">Дизайн-проект, изготовление элементов, доставка, монтаж, техподдержка во время выставки и демонтаж. Работаем под ключ.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contacts">
+        <div class="container">
+            <div class="cta-content">
+                <div>
+                    <h2 class="cta-title">Готовы обсудить ваш проект?</h2>
+                    <p class="cta-text">Оставьте заявку и получите бесплатный дизайн-проект стенда в течение 48 часов</p>
+                    <div class="cta-features">
+                        <span class="cta-feature">Бесплатный дизайн-проект</span>
+                        <span class="cta-feature">Расчёт за 2 часа</span>
+                        <span class="cta-feature">Фиксированная цена</span>
+                        <span class="cta-feature">Работа под ключ</span>
+                    </div>
+                </div>
+                <div class="cta-form">
+                    <h3 class="cta-form-title">Получить консультацию</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-input" placeholder="Телефон" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Название выставки">
+                        </div>
+                        <button type="submit" class="form-btn">Отправить заявку</button>
+                    </form>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">OTIDO Group</div>
+                    <p class="footer-desc">Комплексное техническое обеспечение мероприятий и застройка выставочных стендов с 2003 года.</p>
+                    <div class="footer-social">
+                        <a href="https://t.me/OtidoGroup" target="_blank">TG</a>
+                        <a href="https://vk.com/otidogroup" target="_blank">VK</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.otido-group.ru/expo/">Выставочные стенды</a></li>
+                        <li><a href="https://www.otido-group.ru/rent/">Аренда оборудования</a></li>
+                        <li><a href="https://www.otido-group.ru/event/">Мероприятия</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Компания</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.otido-group.ru/about/">О нас</a></li>
+                        <li><a href="https://www.otido-group.ru/portfolio/">Портфолио</a></li>
+                        <li><a href="https://www.otido-group.ru/contacts/">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Контакты</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:+78126775501">+7 812 677-55-01</a></li>
+                        <li><a href="tel:+74951201701">+7 495 120-17-01</a></li>
+                        <li>СПб · Москва</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2003–2025 OTIDO Group</span>
+                <a href="https://www.otido-group.ru/about/policy/">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Calculator
+        function calculatePrice() {
+            const area = parseInt(document.getElementById('calc-area').value) || 24;
+            const system = document.getElementById('calc-system').value;
+            const city = document.getElementById('calc-city').value;
+            const floors = document.getElementById('calc-floors').value;
+
+            const basePrices = {
+                momo: 8000,
+                bematrix: 12000,
+                prolyte: 6000,
+                doubledeck: 15000
+            };
+
+            const cityMultipliers = {
+                spb: 1,
+                msk: 1.15,
+                other: 1.25
+            };
+
+            let price = area * basePrices[system];
+            price *= cityMultipliers[city];
+            
+            if (floors === '2') {
+                price *= 1.8;
+            }
+
+            document.getElementById('calc-total').innerHTML = 
+                Math.round(price).toLocaleString('ru-RU') + ' <span>₽</span>';
+        }
+
+        document.getElementById('calc-area').addEventListener('input', calculatePrice);
+        document.getElementById('calc-system').addEventListener('change', calculatePrice);
+        document.getElementById('calc-city').addEventListener('change', calculatePrice);
+        document.getElementById('calc-floors').addEventListener('change', calculatePrice);
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+<!-- Artvision.pro Watermark -->
+<style>
+.artvision-watermark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.artvision-watermark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(87, 150, 204, 0.3);
+}
+.artvision-watermark__logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #5796CC 0%, #3a7bb3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.artvision-watermark__text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -0.02em;
+}
+.artvision-watermark__text span {
+    color: #5796CC;
+}
+@media (max-width: 480px) {
+    .artvision-watermark {
+        bottom: 15px;
+        right: 15px;
+        padding: 6px 12px;
+    }
+    .artvision-watermark__logo {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .artvision-watermark__text {
+        font-size: 11px;
+    }
+}
+@media print {
+    .artvision-watermark { display: none !important; }
+}
+</style>
+<a href="https://artvision.pro" target="_blank" rel="noopener" class="artvision-watermark" title="Разработано в Artvision.pro">
+    <div class="artvision-watermark__logo">A</div>
+    <div class="artvision-watermark__text">Artvision<span>.pro</span></div>
+</a>
+<!-- /Artvision.pro Watermark -->
+
+</body>
+</html>
