@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!--
+    ╔═══════════════════════════════════════════════════════════╗
+    ║  © 2025 Artvision.pro                                     ║
+    ║  Маркетинговое агентство с 2007 года                      ║
+    ║  Санкт-Петербург • Москва                                 ║
+    ║  https://artvision.pro                                    ║
+    ╚═══════════════════════════════════════════════════════════╝
+    -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VLP Gift Box — Идеальный подарок к Новому году</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #000000;
+      --color-white: #FFFFFF;
+      --color-bg-light: #F5F5F5;
+      --color-text-secondary: #949494;
+      --color-border: #E8E8E8;
+      --color-accent: #C41E3A; /* Новогодний красный */
+      --color-gold: #D4AF37;
+      
+      --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --transition-fast: 0.2s ease;
+      --transition-base: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: var(--font-main);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-primary);
+      background: var(--color-white);
+      overflow-x: hidden;
+    }
+    
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      transition: var(--transition-base);
+    }
+    
+    .header.scrolled {
+      padding: 16px 40px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+    }
+    
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    
+    .header-phone {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    .header-phone:hover {
+      color: var(--color-accent);
+    }
+    
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--color-primary);
+    }
+    
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.3) 0%,
+        rgba(0,0,0,0.5) 50%,
+        rgba(0,0,0,0.7) 100%
+      );
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 120px 24px 80px;
+      max-width: 900px;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--color-accent);
+      color: var(--color-white);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 32px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    
+    .hero-title {
+      font-size: clamp(48px, 10vw, 96px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--color-white);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    
+    .hero-title span {
+      display: block;
+      background: linear-gradient(135deg, var(--color-gold), #F5D78E, var(--color-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 48px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 48px;
+      background: var(--color-white);
+      color: var(--color-primary);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      transition: var(--transition-base);
+    }
+    
+    .hero-cta:hover {
+      background: var(--color-accent);
+      color: var(--color-white);
+      transform: translateY(-2px);
+    }
+    
+    .hero-cta svg {
+      width: 20px;
+      height: 20px;
+      transition: transform var(--transition-fast);
+    }
+    
+    .hero-cta:hover svg {
+      transform: translateX(4px);
+    }
+    
+    /* ===== COUNTDOWN ===== */
+    .countdown-section {
+      background: var(--color-primary);
+      padding: 60px 24px;
+      text-align: center;
+    }
+    
+    .countdown-label {
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-text-secondary);
+      margin-bottom: 24px;
+    }
+    
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .countdown-item {
+      text-align: center;
+    }
+    
+    .countdown-number {
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--color-white);
+      letter-spacing: -0.02em;
+    }
+    
+    .countdown-unit {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-text-secondary);
+      margin-top: 8px;
+    }
+    
+    .countdown-separator {
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.2);
+      line-height: 1;
+    }
+    
+    /* ===== PRODUCT SHOWCASE ===== */
+    .showcase {
+      padding: 120px 24px;
+      background: var(--color-white);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    
+    .section-tag {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+    
+    .section-title {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    
+    .section-subtitle {
+      font-size: 18px;
+      color: var(--color-text-secondary);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .showcase-image {
+      position: relative;
+    }
+    
+    .showcase-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+    }
+    
+    .showcase-image::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: 20px;
+      bottom: 20px;
+      border: 1px solid var(--color-border);
+      z-index: -1;
+    }
+    
+    .showcase-content {
+      padding: 40px 0;
+    }
+    
+    .price-tag {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      margin-bottom: 16px;
+    }
+    
+    .showcase-title {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    
+    .showcase-description {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    
+    .showcase-price {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    
+    .current-price {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    
+    .old-price {
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      text-decoration: line-through;
+    }
+    
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 40px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+    }
+    
+    .btn-primary:hover {
+      background: var(--color-accent);
+      transform: translateY(-2px);
+    }
+    
+    /* ===== WHATS INSIDE ===== */
+    .whats-inside {
+      padding: 120px 24px;
+      background: var(--color-bg-light);
+    }
+    
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    
+    .item-card {
+      background: var(--color-white);
+      padding: 40px 32px;
+      text-align: center;
+      transition: var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .item-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--color-primary);
+      transform: scaleX(0);
+      transition: var(--transition-base);
+    }
+    
+    .item-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .item-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    
+    .item-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-bg-light);
+      border-radius: 50%;
+    }
+    
+    .item-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: var(--color-primary);
+      stroke-width: 1.5;
+      fill: none;
+    }
+    
+    .item-number {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      margin-bottom: 12px;
+    }
+    
+    .item-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .item-desc {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+    
+    /* ===== BENEFITS ===== */
+    .benefits {
+      padding: 120px 24px;
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+    
+    .benefits .section-title {
+      color: var(--color-white);
+    }
+    
+    .benefits .section-subtitle {
+      color: rgba(255,255,255,0.6);
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+    
+    .benefit-item {
+      text-align: center;
+      padding: 40px;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: var(--transition-base);
+    }
+    
+    .benefit-item:hover {
+      border-color: var(--color-accent);
+      background: rgba(255,255,255,0.02);
+    }
+    
+    .benefit-icon {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+    
+    .benefit-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    
+    .benefit-text {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+    
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      padding: 120px 24px;
+      background: var(--color-white);
+      text-align: center;
+    }
+    
+    .cta-box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 80px 60px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+    
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .cta-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    
+    .cta-subtitle {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+    }
+    
+    .cta-form {
+      display: flex;
+      gap: 12px;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    
+    .cta-input {
+      flex: 1;
+      padding: 18px 24px;
+      font-size: 16px;
+      font-family: inherit;
+      border: none;
+      background: var(--color-white);
+      outline: none;
+    }
+    
+    .cta-input::placeholder {
+      color: var(--color-text-secondary);
+    }
+    
+    .cta-btn {
+      padding: 18px 32px;
+      background: var(--color-accent);
+      color: var(--color-white);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition-base);
+      white-space: nowrap;
+    }
+    
+    .cta-btn:hover {
+      background: #a01830;
+    }
+    
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--color-white);
+      padding: 60px 24px;
+      border-top: 1px solid var(--color-border);
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    
+    .footer-logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--color-primary);
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 32px;
+    }
+    
+    .footer-link {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+    
+    .footer-link:hover {
+      color: var(--color-primary);
+    }
+    
+    .footer-contact {
+      text-align: right;
+    }
+    
+    .footer-phone {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    
+    .footer-email {
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+    }
+    
+    .footer-bottom {
+      background: var(--color-primary);
+      padding: 20px 24px;
+      text-align: center;
+    }
+    
+    .footer-legal {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+    }
+    
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      
+      .showcase-image {
+        order: -1;
+      }
+      
+      .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header {
+        padding: 16px 20px;
+      }
+      
+      .hero-content {
+        padding: 100px 20px 60px;
+      }
+      
+      .hero-title {
+        font-size: clamp(36px, 12vw, 64px);
+      }
+      
+      .countdown {
+        gap: 16px;
+      }
+      
+      .countdown-separator {
+        display: none;
+      }
+      
+      .items-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-form {
+        flex-direction: column;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .footer-contact {
+        text-align: center;
+      }
+    }
+    
+    /* ===== SNOWFLAKES ===== */
+    .snowflakes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 1000;
+      overflow: hidden;
+    }
+    
+    .snowflake {
+      position: absolute;
+      top: -20px;
+      color: rgba(255,255,255,0.8);
+      font-size: 16px;
+      animation: fall linear infinite;
+    }
+    
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Snowflakes -->
+  <div class="snowflakes" id="snowflakes"></div>
+  
+  <!-- Header -->
+  <header class="header" id="header">
+    <a href="https://vlpco.ru" class="logo">VLP</a>
+    <a href="tel:88002221061" class="header-phone">8 800 222-10-61</a>
+  </header>
+  
+  <!-- Hero -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="vlpco-hero-desktop.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🎁 Лимитированная коллекция</div>
+      <h1 class="hero-title">
+        VLP<br>
+        <span>Gift Box</span>
+      </h1>
+      <p class="hero-subtitle">
+        Премиальный набор аксессуаров для iPhone — идеальный подарок к Новому году
+      </p>
+      <a href="#order" class="hero-cta">
+        Заказать со скидкой
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Countdown -->
+  <section class="countdown-section">
+    <div class="countdown-label">До Нового года осталось</div>
+    <div class="countdown" id="countdown">
+      <div class="countdown-item">
+        <div class="countdown-number" id="days">00</div>
+        <div class="countdown-unit">дней</div>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="hours">00</div>
+        <div class="countdown-unit">часов</div>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="minutes">00</div>
+        <div class="countdown-unit">минут</div>
+      </div>
+      <div class="countdown-separator">:</div>
+      <div class="countdown-item">
+        <div class="countdown-number" id="seconds">00</div>
+        <div class="countdown-unit">секунд</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Product Showcase -->
+  <section class="showcase">
+    <div class="container">
+      <div class="showcase-grid">
+        <div class="showcase-image animate-on-scroll">
+          <img src="VLP_BOX_1080x1440.jpg" alt="VLP Gift Box">
+        </div>
+        <div class="showcase-content animate-on-scroll">
+          <div class="price-tag">Выгода 40%</div>
+          <h2 class="showcase-title">Всё для вашего iPhone в одной коробке</h2>
+          <p class="showcase-description">
+            Мы собрали идеальный набор премиальных аксессуаров VLP в праздничной упаковке. 
+            Powerbank, зарядка, защитное стекло и чехол — всё, что нужно для полной защиты 
+            и комфорта вашего устройства.
+          </p>
+          <div class="showcase-price">
+            <span class="current-price">5 990 ₽</span>
+            <span class="old-price">9 960 ₽</span>
+          </div>
+          <a href="#order" class="btn-primary">Заказать сейчас</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What's Inside -->
+  <section class="whats-inside">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Что внутри</div>
+        <h2 class="section-title">4 премиальных аксессуара</h2>
+        <p class="section-subtitle">Каждый предмет — оригинальный продукт VLP с гарантией качества</p>
+      </div>
+      
+      <div class="items-grid">
+        <div class="item-card animate-on-scroll">
+          <div class="item-icon">
+            <svg viewBox="0 0 24 24"><rect x="6" y="4" width="12" height="16" rx="2"/><line x1="12" y1="17" x2="12" y2="17.01"/><path d="M9 7h6"/></svg>
+          </div>
+          <div class="item-number">01</div>
+          <div class="item-name">Powerbank 5000 mAh</div>
+          <div class="item-desc">С магнитным креплением MagSafe для беспроводной зарядки на ходу</div>
+        </div>
+        
+        <div class="item-card animate-on-scroll">
+          <div class="item-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2.81"/><path d="M21 16a2 2 0 0 1-2 2h-5"/><line x1="23" y1="13" x2="23" y2="11"/><rect x="8" y="2" width="8" height="20" rx="2"/></svg>
+          </div>
+          <div class="item-number">02</div>
+          <div class="item-name">Сетевая зарядка 20W</div>
+          <div class="item-desc">Быстрая зарядка USB-C PD для максимальной скорости</div>
+        </div>
+        
+        <div class="item-card animate-on-scroll">
+          <div class="item-icon">
+            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <div class="item-number">03</div>
+          <div class="item-name">Защитное стекло</div>
+          <div class="item-desc">Ультратонкое 9H стекло с олеофобным покрытием</div>
+        </div>
+        
+        <div class="item-card animate-on-scroll">
+          <div class="item-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-7.35 16.76L4 22l3.24-.65A10 10 0 1 0 12 2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="item-number">04</div>
+          <div class="item-name">Crystal Case MagSafe</div>
+          <div class="item-desc">Прозрачный чехол с поддержкой магнитной зарядки</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Benefits -->
+  <section class="benefits">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag" style="color: var(--color-gold);">Преимущества</div>
+        <h2 class="section-title">Почему VLP Gift Box</h2>
+        <p class="section-subtitle">Мы продумали каждую деталь, чтобы подарок был идеальным</p>
+      </div>
+      
+      <div class="benefits-grid">
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-icon">🎁</div>
+          <div class="benefit-title">Праздничная упаковка</div>
+          <div class="benefit-text">Фирменная коробка с новогодней лентой — готовый подарок без лишних хлопот</div>
+        </div>
+        
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-icon">💎</div>
+          <div class="benefit-title">Премиум качество</div>
+          <div class="benefit-text">Только оригинальные аксессуары VLP с официальной гарантией производителя</div>
+        </div>
+        
+        <div class="benefit-item animate-on-scroll">
+          <div class="benefit-icon">🚀</div>
+          <div class="benefit-title">Быстрая доставка</div>
+          <div class="benefit-text">Доставим до Нового года по всей России. Бесплатно при заказе от 5000 ₽</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta-section" id="order">
+    <div class="container">
+      <div class="cta-box animate-on-scroll">
+        <div class="cta-content">
+          <h2 class="cta-title">Успейте заказать до праздников</h2>
+          <p class="cta-subtitle">Оставьте телефон — перезвоним за 5 минут</p>
+          <form class="cta-form" id="orderForm">
+            <input type="tel" class="cta-input" placeholder="+7 (___) ___-__-__" required>
+            <button type="submit" class="cta-btn">Заказать</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">VLP</div>
+      <div class="footer-links">
+        <a href="https://vlpco.ru/o-kompanii/" class="footer-link">О бренде</a>
+        <a href="https://vlpco.ru/biznesu/" class="footer-link">Для бизнеса</a>
+        <a href="https://vlpco.ru/refund/" class="footer-link">Возврат</a>
+        <a href="https://vlpco.ru/privacy/" class="footer-link">Политика конфиденциальности</a>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:88002221061" class="footer-phone">8 800 222-10-61</a><br>
+        <a href="/cdn-cgi/l/email-protection#80f3f5f0f0eff2f4c0f6ecf0e3efaef2f5" class="footer-email"><span class="__cf_email__" data-cfemail="42313732322d303602342e32212d6c3037">[email&#160;protected]</span></a>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <div class="footer-legal">© 2024 ООО «Ви Эл Пи компани» · ИНН: 7842495283</div>
+  </div>
+  
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Countdown timer
+    function updateCountdown() {
+      const newYear = new Date('January 1, 2025 00:00:00').getTime();
+      const now = new Date().getTime();
+      const diff = newYear - now;
+      
+      if (diff > 0) {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      }
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    
+    // Scroll animations
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 100);
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    animatedElements.forEach(el => observer.observe(el));
+    
+    // Snowflakes
+    function createSnowflakes() {
+      const container = document.getElementById('snowflakes');
+      const flakes = ['❄', '❅', '❆', '✦', '✧'];
+      
+      for (let i = 0; i < 30; i++) {
+        const flake = document.createElement('div');
+        flake.className = 'snowflake';
+        flake.textContent = flakes[Math.floor(Math.random() * flakes.length)];
+        flake.style.left = Math.random() * 100 + '%';
+        flake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+        flake.style.animationDelay = Math.random() * 5 + 's';
+        flake.style.fontSize = (Math.random() * 12 + 8) + 'px';
+        flake.style.opacity = Math.random() * 0.5 + 0.3;
+        container.appendChild(flake);
+      }
+    }
+    
+    createSnowflakes();
+    
+    // Form submission
+ 
+<!-- Artvision.pro Watermark -->
+<style>
+.artvision-watermark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+.artvision-watermark:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(87, 150, 204, 0.3);
+}
+.artvision-watermark__logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #5796CC 0%, #3a7bb3 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+.artvision-watermark__text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: -0.02em;
+}
+.artvision-watermark__text span {
+    color: #5796CC;
+}
+@media (max-width: 480px) {
+    .artvision-watermark {
+        bottom: 15px;
+        right: 15px;
+        padding: 6px 12px;
+    }
+    .artvision-watermark__logo {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .artvision-watermark__text {
+        font-size: 11px;
+    }
+}
+@media print {
+    .artvision-watermark { display: none !important; }
+}
+</style>
+<a href="https://artvision.pro" target="_blank" rel="noopener" class="artvision-watermark" title="Разработано в Artvision.pro">
+    <div class="artvision-watermark__logo">A</div>
+    <div class="artvision-watermark__text">Artvision<span>.pro</span></div>
+</a>
+<!-- /Artvision.pro Watermark -->
