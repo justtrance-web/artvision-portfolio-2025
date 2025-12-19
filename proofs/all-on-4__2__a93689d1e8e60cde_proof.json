@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "type": "copyright_proof",
+  "author": "Artvision.pro",
+  "author_details": {
+    "company": "Маркетинговое агентство Artvision",
+    "location": "Санкт-Петербург, Москва",
+    "website": "https://artvision.pro",
+    "since": 2007
+  },
+  "file": {
+    "name": "all-on-4__2_.html",
+    "original_path": "/mnt/user-data/outputs/landings-protected/all-on-4__2_.html",
+    "size_bytes": 49068,
+    "hash_algorithm": "SHA-256",
+    "hash": "a93689d1e8e60cde658767621e759e7dce8659dcc3e76c7b22e70523ecc5698d"
+  },
+  "timestamp": {
+    "created": "2025-12-19T14:51:44.785885",
+    "timezone": "Europe/Moscow",
+    "unix": 1766155904
+  },
+  "content_fingerprint": {
+    "first_100_chars_hash": "bb004080d817aac89dd21cd8992f86a5c229c53df1559f07470b76f291277f3a",
+    "last_100_chars_hash": "920cca902d24395854d006bf5deff4224f11ba4013981340e51828dddf7a6d13",
+    "total_lines": 1329,
+    "total_chars": 42821
+  }
+}
