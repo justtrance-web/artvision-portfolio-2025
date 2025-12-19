@@ -1,0 +1,236 @@
+{
+  "files": [
+    {
+      "id": 1,
+      "file_name": "demo-landing.html",
+      "original_path": "/home/claude/blockchain-copyright/demo/demo-landing.html",
+      "hash": "558a62d0abcecc05c28f2bb04d965d693aa6bace5c0cb6c973a5dc33130d2107",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:29:50.574469",
+      "project": "Demo Test",
+      "client": null,
+      "description": "Тестовый запуск системы",
+      "proofs": {
+        "local": {
+          "proof_file": "/home/claude/blockchain-copyright/proofs/demo-landing_558a62d0abcecc05_proof.json",
+          "proof_hash": "cd902db5f1573d1aeb44cb07ad98712300c2a27600ab215557c2d7d78861caef"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 2,
+      "file_name": "alfa-clinic-bold__1___1_.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/alfa-clinic-bold__1___1_.html",
+      "hash": "dd2cb43081d28067f99febc3d3b341d98697c9dcad2da92847d348927c6444e2",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:43.166762",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/alfa-clinic-bold__1___1__dd2cb43081d28067_proof.json",
+          "proof_hash": "fe34a84eef81331da9fa2422edd940c08adfd1c207c9f323b9d18c1de13fa849"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 3,
+      "file_name": "alfa-clinic-v4-dark__1_.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/alfa-clinic-v4-dark__1_.html",
+      "hash": "4c153f5e34fd1db859a4491dbec428e52db8d9931a6827b8d436ea320da9c573",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:43.272832",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/alfa-clinic-v4-dark__1__4c153f5e34fd1db8_proof.json",
+          "proof_hash": "b915feb73c32e421c62966628784f902ab8ce51a7a769292af829feb50c1ace3"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 4,
+      "file_name": "all-on-4-complete.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/all-on-4-complete.html",
+      "hash": "7cf4658d5a7f3d280246dc1caab9bf81cd2371ffb112c07464e41046ef9e3d72",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:43.529555",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/all-on-4-complete_7cf4658d5a7f3d28_proof.json",
+          "proof_hash": "555bf5aadadfbe42b69110e588812dd157f035d24559e9972088e3e4913379da"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 5,
+      "file_name": "all-on-4-complete__1_.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/all-on-4-complete__1_.html",
+      "hash": "af12cc131b5e8541865465f5df73a131c11709f8f293bc4c4d094a92c514ee39",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:44.544981",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/all-on-4-complete__1__af12cc131b5e8541_proof.json",
+          "proof_hash": "1e00501a2ff5c14dc5c34a95e7824f579cdf95d10fceb7e12697be53dfed42a4"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 6,
+      "file_name": "all-on-4-complete__2_.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/all-on-4-complete__2_.html",
+      "hash": "8ab0c7c94b83a7096ab9caaac34dd4e7a4a00771b850b806849d656010242994",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:44.781987",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/all-on-4-complete__2__8ab0c7c94b83a709_proof.json",
+          "proof_hash": "e500c163679432aafef0aaa24217dca519b1555b266613eae32039c48e3989a1"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 7,
+      "file_name": "all-on-4__2_.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/all-on-4__2_.html",
+      "hash": "a93689d1e8e60cde658767621e759e7dce8659dcc3e76c7b22e70523ecc5698d",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:45.049521",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/all-on-4__2__a93689d1e8e60cde_proof.json",
+          "proof_hash": "7eb09e6ca751f285d20a35cb17c5c723f2671aec8b77808fc40f539f1d011031"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 8,
+      "file_name": "otido-landing-v5.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/otido-landing-v5.html",
+      "hash": "094888b6451fd6ed525d76cf0ad70a0db1bfbe6eb1f890b9298eaa9cf66b7bb8",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:45.155508",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/otido-landing-v5_094888b6451fd6ed_proof.json",
+          "proof_hash": "07cf128f33cd96591b61985064e5ab6b5759a4d9bf23434866aa2dac8d16007b"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 9,
+      "file_name": "vlp-giftbox-final.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/vlp-giftbox-final.html",
+      "hash": "689e7259b99dfec760d9dfd9c4dbba8e8b3edf9f304c42a6eb3895a9fad57b03",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:45.227045",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/vlp-giftbox-final_689e7259b99dfec7_proof.json",
+          "proof_hash": "d310e22141450a58c43f216732bf5015e07721176f82a634216508ce02172ce0"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 10,
+      "file_name": "vlp-giftbox-landing.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/vlp-giftbox-landing.html",
+      "hash": "1ba69864f5f3a9d0fa681473510b7a8b43628a23fd1c228ff88c89bc40623253",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:45.288432",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/vlp-giftbox-landing_1ba69864f5f3a9d0_proof.json",
+          "proof_hash": "7e1ccb082ba9a1c559bc59a95e05b71b967ca8c8fdc9f152cdcc1730fe5ce2fc"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 11,
+      "file_name": "vlp-giftbox-standalone.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/vlp-giftbox-standalone.html",
+      "hash": "7c8a5d4db033d3ab23d2bdf64496fe71c7f035df5262fedcfc3a1ee1c285e5c4",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:45.415546",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/vlp-giftbox-standalone_7c8a5d4db033d3ab_proof.json",
+          "proof_hash": "e740c4a4fe35fa82a375421d9e757747c9ca5d526be3f3628c927757d5e1416a"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    },
+    {
+      "id": 12,
+      "file_name": "ТМК_-_Годовои__отчет__2024___пример___1_.html",
+      "original_path": "/mnt/user-data/outputs/landings-protected/ТМК_-_Годовои__отчет__2024___пример___1_.html",
+      "hash": "fb4e9d5ae6c85bef701702442badd20ae9810670d3a6be1106e5e743e54ed5fb",
+      "hash_algorithm": "SHA-256",
+      "registered_at": "2025-12-19T14:51:45.483441",
+      "project": "Artvision Portfolio 2025",
+      "client": null,
+      "description": null,
+      "proofs": {
+        "local": {
+          "proof_file": "/mnt/user-data/outputs/blockchain-copyright/proofs/ТМК_-_Годовои__отчет__2024___пример___1__fb4e9d5ae6c85bef_proof.json",
+          "proof_hash": "290b7627480e093b7164c09e21969403b9e19e341d50df3124953c0d45e927ed"
+        },
+        "blockchain": null
+      },
+      "status": "protected"
+    }
+  ],
+  "metadata": {
+    "created": "2025-12-19T14:29:50.289255",
+    "updated": "2025-12-19T14:51:45.483456"
+  }
+}
