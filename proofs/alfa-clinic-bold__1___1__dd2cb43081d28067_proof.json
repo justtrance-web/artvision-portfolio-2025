@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "type": "copyright_proof",
+  "author": "Artvision.pro",
+  "author_details": {
+    "company": "Маркетинговое агентство Artvision",
+    "location": "Санкт-Петербург, Москва",
+    "website": "https://artvision.pro",
+    "since": 2007
+  },
+  "file": {
+    "name": "alfa-clinic-bold__1___1_.html",
+    "original_path": "/mnt/user-data/outputs/landings-protected/alfa-clinic-bold__1___1_.html",
+    "size_bytes": 47826,
+    "hash_algorithm": "SHA-256",
+    "hash": "dd2cb43081d28067f99febc3d3b341d98697c9dcad2da92847d348927c6444e2"
+  },
+  "timestamp": {
+    "created": "2025-12-19T14:51:42.856552",
+    "timezone": "Europe/Moscow",
+    "unix": 1766155902
+  },
+  "content_fingerprint": {
+    "first_100_chars_hash": "bb004080d817aac89dd21cd8992f86a5c229c53df1559f07470b76f291277f3a",
+    "last_100_chars_hash": "920cca902d24395854d006bf5deff4224f11ba4013981340e51828dddf7a6d13",
+    "total_lines": 1530,
+    "total_chars": 45847
+  }
+}
