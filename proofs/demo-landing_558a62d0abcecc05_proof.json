@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "type": "copyright_proof",
+  "author": "Artvision.pro",
+  "author_details": {
+    "company": "Маркетинговое агентство Artvision",
+    "location": "Санкт-Петербург, Москва",
+    "website": "https://artvision.pro",
+    "since": 2007
+  },
+  "file": {
+    "name": "demo-landing.html",
+    "original_path": "/home/claude/blockchain-copyright/demo/demo-landing.html",
+    "size_bytes": 2784,
+    "hash_algorithm": "SHA-256",
+    "hash": "558a62d0abcecc05c28f2bb04d965d693aa6bace5c0cb6c973a5dc33130d2107"
+  },
+  "timestamp": {
+    "created": "2025-12-19T14:29:50.289933",
+    "timezone": "Europe/Moscow",
+    "unix": 1766154590
+  },
+  "content_fingerprint": {
+    "first_100_chars_hash": "1312d19ac18f36337e3e80ca0694e6285a3127fc86bc11ed37aece210467db57",
+    "last_100_chars_hash": "6a7a80923fea9735bd16bc1e32cee26de0f4506657088bc3136457d6d0fc2930",
+    "total_lines": 66,
+    "total_chars": 2356
+  }
+}
